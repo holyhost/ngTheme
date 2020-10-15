@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/theme.scss';
+
+div{
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    text-align: center;
+    @include def-theme();
+    width: 100%;
+    height: 100%;
+}

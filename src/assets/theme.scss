@@ -1,0 +1,47 @@
+@import './base.scss';
+
+//一整套
+@mixin def_theme() {
+    :host-context([theme-style='dark']) & {
+        color: $dark_color;
+        background-color: $dark_main;
+    }
+    :host-context([theme-style='light']) & {
+        color: $light_color;
+        background-color: $light_main;
+    }
+    // :host-context([data-theme-style='contrast']) & {
+    //     color: $contrast_color;
+    //     background-color: $contrast_main;
+    // }
+}
+
+// 单独设置 背景颜色
+@mixin bg_color() {
+    :host-context([theme-style='dark']) & {
+        background-color: $dark;
+    }
+    :host-context([data-theme-style='light']) & {
+        background-color: $light;
+    }
+}
+
+// 单独设置 字体颜色
+@mixin font_color() {
+    :host-context([theme-style='dark']) & {
+        color: $dark-color;
+    }
+    :host-context([theme-style='light']) & {
+        color: $light-color;
+    }
+}
+// 单独设置 边框颜色
+@mixin border_color(){
+    :host-context([theme-style='dark']) & {
+        border: solid 2px $dark;
+    }
+
+    :host-context([theme-style='light']) & {
+        border: solid 2px $light;
+    }
+}
