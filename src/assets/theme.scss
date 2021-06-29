@@ -2,18 +2,22 @@
 
 //一整套
 @mixin def_theme() {
+    // 可以考虑用for循环生成
+    // 黑色主题
     :host-context([theme-style='dark']) & {
         color: $dark_color;
         background-color: $dark_main;
     }
+    // 亮色主题
     :host-context([theme-style='light']) & {
         color: $light_color;
         background-color: $light_main;
     }
-    // :host-context([data-theme-style='contrast']) & {
-    //     color: $contrast_color;
-    //     background-color: $contrast_main;
-    // }
+    // 常用主题
+    :host-context([theme-style='contrast']) & {
+        color: $contrast_color;
+        background-color: $contrast_main;
+    }
 }
 
 // 单独设置 背景颜色

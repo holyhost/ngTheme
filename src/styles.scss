@@ -6,6 +6,7 @@ div{
     padding: 0;
 }
 
+//定义了一个内容类。只要是 这个类下面的元素都会按照主题色变化
 .content{
     text-align: center;
     @include def-theme();

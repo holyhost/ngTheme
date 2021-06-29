@@ -7,9 +7,6 @@
     width: 100%;
 }
 .b-style{
-
-    // @include font_color(red,blue);
-    // @include bg_color(red,blue)
     @include border_color
 
 }
